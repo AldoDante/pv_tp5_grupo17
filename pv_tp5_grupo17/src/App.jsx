@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom';
 import {useAlumnos} from './hooks/useAlumnos';
 import NavBar from './components/NavBar';
-
+import ListaAlumnos from './pages/ListaAlumnos';
 
 function App() {
   const {
@@ -16,6 +17,13 @@ function App() {
   return (
     <>
       <NavBar />
+      <Routes>
+        <Route path="/alumnos" element={<ListaAlumnos
+              alumnos={alumnos}
+              deleteAlumno={deleteAlumno}
+              startEditAlumno={startEditAlumno}
+            />} />
+      </Routes>
     </>
   )
 }
