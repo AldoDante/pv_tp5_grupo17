@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import {useAlumnos} from './hooks/useAlumnos';
 import NavBar from './components/NavBar';
 import ListaAlumnos from './pages/ListaAlumnos';
+import FormAlumno from './pages/FormAlumno';
 
 function App() {
   const {
@@ -23,6 +24,18 @@ function App() {
               deleteAlumno={deleteAlumno}
               startEditAlumno={startEditAlumno}
             />} />
+        <Route path="/alumnos/:id/editar" element={<FormAlumno
+          addAlumno={addAlumno}
+          editingAlumno={editingAlumno}
+          updateAlumno={updateAlumno}
+          alumnos={alumnos}
+        />} />
+         <Route path="/alumnos/nuevo" element={<FormAlumno
+          addAlumno={addAlumno}
+          editingAlumno={editingAlumno}
+          updateAlumno={updateAlumno}
+          alumnos={alumnos}
+        />} />
       </Routes>
     </>
   )
