@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import {useAlumnos} from './hooks/useAlumnos';
+import NavBar from './components/NavBar';
+
 
 function App() {
   const {
@@ -13,6 +15,7 @@ function App() {
 
   return (
     <>
+      <NavBar />
     </>
   )
 }
