@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import ListaAlumnos from './pages/ListaAlumnos';
 import FormAlumno from './pages/FormAlumno';
 import Home from './pages/home';
-
+import Acerca from './pages/Acerca';
 function App() {
   const {
     alumnos,
@@ -38,6 +38,7 @@ function App() {
           updateAlumno={updateAlumno}
           alumnos={alumnos}
         />} />
+        <Route path="/acerca" element={<Acerca />} />
       </Routes>
     </>
   )
