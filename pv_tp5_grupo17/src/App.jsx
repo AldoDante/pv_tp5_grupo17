@@ -4,6 +4,7 @@ import {useAlumnos} from './hooks/useAlumnos';
 import NavBar from './components/NavBar';
 import ListaAlumnos from './pages/ListaAlumnos';
 import FormAlumno from './pages/FormAlumno';
+import Home from './pages/home';
 
 function App() {
   const {
@@ -19,6 +20,7 @@ function App() {
     <>
       <NavBar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/alumnos" element={<ListaAlumnos
               alumnos={alumnos}
               deleteAlumno={deleteAlumno}
