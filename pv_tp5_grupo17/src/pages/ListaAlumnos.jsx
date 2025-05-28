@@ -1,4 +1,6 @@
 
+import AlumnoCard from '../components/AlumnoCard';
+
 export default function ListaAlumnos({ alumnos, deleteAlumno, startEditAlumno }) {
   if (alumnos.length === 0) {
     return <p>No hay alumnos registrados.</p>;
