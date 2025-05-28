@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Form, Button, Container, Card } from "react-bootstrap";
 
 export default function FormAlumno( { addAlumno, editingAlumno, updateAlumno, alumnos }) {
   const [form, setForm] = useState({
@@ -107,15 +108,103 @@ export default function FormAlumno( { addAlumno, editingAlumno, updateAlumno, al
   };
 
   return (
-    <form onSubmit={handleSubmit} >
-      <input name="id" placeholder="ID" value={form.id} onChange={handleChange} className="input" required />
-      <input name="nombre"  placeholder="Nombre" value={form.nombre} onChange={handleChange} className="input" required />
-      <input name="apellido"  placeholder="Apellido" value={form.apellido} onChange={handleChange} className="input" required />
-      <input name="curso"  placeholder="Curso" value={form.curso} onChange={handleChange} className="input" required />
-      <input name="email"  placeholder="Email" value={form.email} onChange={handleChange} className="input" required />
-      <input name="domicilio"  placeholder="Domicilio" value={form.domicilio} onChange={handleChange} className="input" required />
-      <input name="telefono"  placeholder="Teléfono" value={form.telefono} onChange={handleChange} className="input" required />
-      <button type="submit">{editingAlumno ? 'Actualizar' : 'Agregar'}</button>
-    </form>
+    <Container className="mt-5 d-flex justify-content-center">
+      <Card className="p-4 shadow-lg rounded-4 border-0" style={{ maxWidth: "600px", width: "100%" }}>
+        <h3 className="text-center mb-4">
+          {editingAlumno ? "Editar Alumno" : "Nuevo Alumno"}
+        </h3>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formId">
+            <Form.Label>ID</Form.Label>
+            <Form.Control
+              type="text"
+              name="id"
+              placeholder="ID"
+              value={form.id}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formNombre">
+            <Form.Label>Nombre</Form.Label>
+            <Form.Control
+              type="text"
+              name="nombre"
+              placeholder="Nombre"
+              value={form.nombre}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formApellido">
+            <Form.Label>Apellido</Form.Label>
+            <Form.Control
+              type="text"
+              name="apellido"
+              placeholder="Apellido"
+              value={form.apellido}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formCurso">
+            <Form.Label>Curso</Form.Label>
+            <Form.Control
+              type="text"
+              name="curso"
+              placeholder="Curso"
+              value={form.curso}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formDomicilio">
+            <Form.Label>Domicilio</Form.Label>
+            <Form.Control
+              type="text"
+              name="domicilio"
+              placeholder="Domicilio"
+              value={form.domicilio}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-4" controlId="formTelefono">
+            <Form.Label>Teléfono</Form.Label>
+            <Form.Control
+              type="text"
+              name="telefono"
+              placeholder="Teléfono"
+              value={form.telefono}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <div className="d-grid">
+            <Button variant="primary" type="submit" size="lg">
+              {editingAlumno ? "Actualizar" : "Agregar"}
+            </Button>
+          </div>
+        </Form>
+      </Card>
+    </Container>
   );
 }
