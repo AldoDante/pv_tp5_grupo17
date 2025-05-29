@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function NavBar() {
   return (
-     <Navbar expand="lg" className="bg-body-tertiary">
+     <Navbar expand="lg" bg="success" data-bs-theme="dark" >
       <Container>
         <Navbar.Brand as={Link} to="/">Inicio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

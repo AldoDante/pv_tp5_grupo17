@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import {useAlumnos} from './hooks/useAlumnos';
-import NavBar from './components/NavBar';
+import NavBar from './components/Navbar';
 import ListaAlumnos from './pages/ListaAlumnos';
 import FormAlumno from './pages/FormAlumno';
 import Home from './pages/home';
