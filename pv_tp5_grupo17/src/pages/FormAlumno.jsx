@@ -202,6 +202,10 @@ export default function FormAlumno( { addAlumno, editingAlumno, updateAlumno, al
             <Button variant="primary" type="submit" size="lg">
               {editingAlumno ? "Actualizar" : "Agregar"}
             </Button>
+            <Button variant="danger" size="lg" onClick={() => navigate('/alumnos')}>
+              Cancelar
+            </Button>
+
           </div>
         </Form>
       </Card>

@@ -1,0 +1,9 @@
+/* Fondo cálido oscuro */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2f4933, #75c987); /* fondo oscuro con degradado */
+  color: #fff; /* texto blanco */
+  font-family: Arial, sans-serif;
+}

@@ -8,7 +8,7 @@ export default function DetalleAlumno({ alumnos }) {
   const navigate = useNavigate();
   const alumno = alumnos.find(a => a.id === id);
 
-  if (!alumno) return <p>Alumno no encontrado</p>;
+  if (!alumno) return <h2>Alumno no encontrado</h2>;
 
   return (
     <div>
