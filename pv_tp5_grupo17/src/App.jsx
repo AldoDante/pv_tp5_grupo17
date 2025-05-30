@@ -1,33 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import {useAlumnos} from './hooks/useAlumnos';
+import NavBar from './components/Navbar';
+import ListaAlumnos from './pages/ListaAlumnos';
+import FormAlumno from './pages/FormAlumno';
+import Home from './pages/home';
+import Acerca from './pages/Acerca';
+import DetalleAlumno from './pages/DetalleAlumno';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const {
+    alumnos,
+    editingAlumno,
+    addAlumno,
+    updateAlumno,
+    deleteAlumno,
+    startEditAlumno
+  } = useAlumnos();
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/alumnos" element={<ListaAlumnos
+              alumnos={alumnos}
+              deleteAlumno={deleteAlumno}
+              startEditAlumno={startEditAlumno}
+            />} />
+        <Route path="/alumnos/:id" element={<DetalleAlumno
+          alumnos={alumnos}
+        />} />
+        <Route path="/alumnos/:id/editar" element={<FormAlumno
+          addAlumno={addAlumno}
+          editingAlumno={editingAlumno}
+          updateAlumno={updateAlumno}
+          alumnos={alumnos}
+        />} />
+         <Route path="/alumnos/nuevo" element={<FormAlumno
+          addAlumno={addAlumno}
+          editingAlumno={editingAlumno}
+          updateAlumno={updateAlumno}
+          alumnos={alumnos}
+        />} />
+        <Route path="/acerca" element={<Acerca />} />
+      </Routes>
     </>
   )
 }
