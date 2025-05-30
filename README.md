@@ -1,6 +1,11 @@
 # 🎓 Sistema de Gestión de Alumnos - React + Vite
 
 ---
+## 👥 Integrantes del Grupo 17
+
+👤 Gonzalo Ricardo Taritolay - @GonzaTaritolay
+👤 Aldo Dante Antivilo       - @AldoDante
+👤 Julio Nahuel Heredia      - @Jnh1212
 
 ## 📋 Descripción
 
