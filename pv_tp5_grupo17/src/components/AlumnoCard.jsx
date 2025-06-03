@@ -28,27 +28,29 @@ export default function AlumnoCard({ alumno, deleteAlumno, startEditAlumno }) {
           <td>{alumno.domicilio}</td>
           <td>{alumno.telefono}</td>
           <td>
-            <Button variant="success" className="me-2" >
-              <Link 
-                to={`/alumnos/${alumno.id}`} 
-                style={{ textDecoration: 'none', color: 'white' }}>
-              Ver Detalles
-              </Link>
-            </Button>
-            <Button variant="warning" className="me-2" >
-              <Link 
-                to={`/alumnos/${alumno.id}/editar`} 
-                onClick={() => startEditAlumno(alumno)} 
-                style={{ textDecoration: 'none', color: 'white' }}>
-              Editar
-              </Link>
-            </Button>
-            <Button 
-              onClick={() => deleteAlumno(alumno.id)} 
-              variant="danger"
-              className="me-2">
-              Eliminar
-            </Button>
+            <div>
+              <Button variant="success" className="me-2" >
+                <Link 
+                  to={`/alumnos/${alumno.id}`} 
+                  style={{ textDecoration: 'none', color: 'white' }}>
+                <i className="bi bi-eye"></i>
+                </Link>
+              </Button>
+              <Button variant="warning" className="me-2" >
+                <Link 
+                  to={`/alumnos/${alumno.id}/editar`} 
+                  onClick={() => startEditAlumno(alumno)} 
+                  style={{ textDecoration: 'none', color: 'white' }}>
+                <i className="bi bi-pencil"></i>
+                </Link>
+              </Button>
+              <Button 
+                onClick={() => deleteAlumno(alumno.id)} 
+                variant="danger"
+                className="me-2">
+                <i className="bi bi-trash"></i>
+              </Button>
+            </div>
           </td>
         </tr>
       </tbody>
