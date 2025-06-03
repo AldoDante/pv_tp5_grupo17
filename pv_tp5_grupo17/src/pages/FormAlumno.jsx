@@ -113,7 +113,7 @@ export default function FormAlumno({ addAlumno, editingAlumno, updateAlumno, alu
 
   return (
     <Container className="mt-5 d-flex justify-content-center">
-      <Card className="p-4 shadow-lg rounded-4 border-0" style={{ maxWidth: "600px", width: "100%" }}>
+      <Card className="form-alumno-card p-4 shadow-lg rounded-4 border-0" style={{ maxWidth: "600px", width: "100%" }}>
         <h3 className="text-center mb-4">
           {editingAlumno ? "Editar Alumno" : "Nuevo Alumno"}
         </h3>
@@ -204,9 +204,11 @@ export default function FormAlumno({ addAlumno, editingAlumno, updateAlumno, alu
 
           <div className="d-grid gap-2">
             <Button variant="primary" type="submit" size="lg">
+              <i className="bi bi-check-circle me-2"></i>
               {editingAlumno ? "Actualizar" : "Agregar"}
             </Button>
             <Button variant="danger" size="lg" onClick={() => navigate('/alumnos')}>
+              <i className="bi bi-x-circle me-2"></i>
               Cancelar
             </Button>
           </div>

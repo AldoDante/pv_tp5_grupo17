@@ -101,3 +101,48 @@
   border-radius: 24px;
   padding: 2rem 1.5rem;
 }
+
+.form-alumno-card {
+  background: linear-gradient(120deg, #e0ffe9 0%, #e0f7ff 100%);
+  border: none;
+  box-shadow: 0 4px 24px rgba(22,202,115,0.10), 0 1.5px 8px rgba(86,224,255,0.08);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.form-alumno-card:hover {
+  box-shadow: 0 8px 32px rgba(22,202,115,0.18), 0 3px 16px rgba(86,224,255,0.13);
+}
+
+.form-alumno-card h3 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.form-alumno-card .form-label {
+  font-weight: 650;
+}
+
+.form-alumno-card .form-control:focus {
+  border-color: #16ca73;
+  box-shadow: 0 0 0 0.2rem rgba(22,202,115,0.15);
+}
+
+.form-alumno-card .btn-primary {
+  background: linear-gradient(90deg, #16ca73 0%, #56e0ff 100%);
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.form-alumno-card .btn-primary:hover {
+  background: linear-gradient(90deg, #56e0ff 0%, #16ca73 100%);
+}
+
+.form-alumno-card .btn-danger {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
