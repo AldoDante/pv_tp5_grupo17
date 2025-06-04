@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 export default function AlumnoCard({ alumno, deleteAlumno, startEditAlumno }) {
   return (
 
-    <Table responsive striped bordered hover variant="dark">
+    <Table >
       <thead>
         <tr>
           <th>Id</th>
