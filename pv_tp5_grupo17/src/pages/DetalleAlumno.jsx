@@ -12,12 +12,12 @@ export default function DetalleAlumno({ alumnos }) {
 
   return (
     <div>
-      <h2>Detalles del Alumno</h2>
-      <Card style={{ width: '18rem', margin: '20px auto' }}>
+      <h2 className="detalle-titulo">Detalles del Alumno</h2>
+      <Card className="detalle-alumno-card mx-auto my-4" style={{ maxWidth: "400px", width: "100%" }}>
         <Card.Img variant="top" src="/images/perfil.jpg" />
         <Card.Body>
-          <Card.Title> Alumno: {alumno.nombre} {alumno.apellido}</Card.Title>
-          <div className="card-text">
+          <Card.Title className="detalle-alumno text-center"> Alumno: {alumno.nombre} {alumno.apellido}</Card.Title>
+          <div className="detalle-alumno-texto">
             <p><strong>ID:</strong> {id}</p>
             <p><strong>Curso:</strong> {alumno.curso}</p>
             <p><strong>Email:</strong> {alumno.email}</p>
@@ -25,7 +25,7 @@ export default function DetalleAlumno({ alumnos }) {
             <p><strong>Teléfono:</strong> {alumno.telefono}</p>
           </div>
 
-          <Button variant="primary" onClick={() => navigate('/alumnos')}>Volver a la lista</Button>
+          <Button variant="primary" size="lg" className="d-block mx-auto mt-4" onClick={() => navigate('/alumnos')}>Volver a la lista</Button>
         </Card.Body>
       </Card>
     </div>
